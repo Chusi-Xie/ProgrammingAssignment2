@@ -21,14 +21,14 @@ set<-function(y){
 
 
 ## Write a short comment describing this function
-
+## Return a matrix that is the inverse of 'x'
 cacheSolve <- function(x, ...) {
-      inverse1<-x$getInverse() ## Return a matrix that is the inverse of 'x'
+      inverse1<-x$getInverse() 
       if(!is.null(inverse1)) {
         message("getting cached data")
         return(inverse1)
       }
-      matrix1 <- x$get()
+      matrix1 <- x$get() 
       inverse1 <- solve(matrix1, ...)
       x$setInverse(inverse1)
       inverse1
